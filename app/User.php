@@ -47,4 +47,6 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Predavanje',  'dolasci', 'user_id', 'predavanje_id');
     }
+
+
 }

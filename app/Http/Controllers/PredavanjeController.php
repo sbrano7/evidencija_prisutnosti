@@ -57,7 +57,7 @@ class PredavanjeController extends Controller
         $predavanje->vrijeme = $request->vrijeme;
         $predavanje->save();
 
-        return redirect(route("kolegiji.pogled"));
+        return redirect(route("predavanja.pogled",$predavanje->kolegij_id));
 
     }
 
@@ -66,7 +66,7 @@ class PredavanjeController extends Controller
         $predavanje = Predavanje::find($id);
         $predavanje->delete();
 
-        return redirect(route("kolegiji.pogled"));
+        return redirect(route("predavanja.pogled",$predavanje->kolegij_id));
 
     }
 

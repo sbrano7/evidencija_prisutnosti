@@ -45,8 +45,7 @@ class UserController extends Controller
         $users =Dolazak::where('predavanje_id', '=', $id)->get();
 
         return view('dolasci.pogled_prof', ['users' => $users]);
+
     }
-
-
 
 }
