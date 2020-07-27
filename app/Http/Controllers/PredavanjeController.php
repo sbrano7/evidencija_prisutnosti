@@ -14,8 +14,8 @@ class PredavanjeController extends Controller
 
 
         $predavanja =Predavanje::where('kolegij_id', '=', $id)->get();
-
-        return view('predavanja.pogled', ['predavanja' => $predavanja,]);
+        $kolegij = Kolegij::where('id', '=', $id)->first();
+        return view('predavanja.pogled', ['predavanja' => $predavanja,'kolegij' => $kolegij]);
     }
 
 

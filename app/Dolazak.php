@@ -18,8 +18,8 @@ class Dolazak extends Model
 
 
     public function predavanje()
-{
-    return $this->belongsTo('App\predavanje',  'predavanje_id');
-}
+    {
+       return $this->belongsTo('App\predavanje',  'predavanje_id');
+    }
 
 }

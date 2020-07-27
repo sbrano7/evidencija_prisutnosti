@@ -45,7 +45,7 @@ Route::post('/predavanja/uredi/{id}', 'PredavanjeController@edit')->name('predav
 
 Route::get('/dolasci/pogled_ucenik/{id}', 'DolazakController@predavanja_ucenik')->name('dolasci.pogled_ucenik');
 
-Route::get('/dolasci/pogled_prof/{id}', 'UserController@users')->name('dolasci.pogled_prof');
+Route::get('/dolasci/pogled_prof/{id}', 'DolazakController@users')->name('dolasci.pogled_prof');
 
 
 

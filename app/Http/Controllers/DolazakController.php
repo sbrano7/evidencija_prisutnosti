@@ -17,14 +17,13 @@ class DolazakController extends Controller
     }
 
 
-    public function prisutnost($id)
+    public function users($id)
     {
-        $predavanja = Predavanje::where('kolegij_id', '=', $id)->get();
+        $dolasci =Dolazak::where('predavanje_id', '=', $id)->with(['user'])->get();
+        $predavanje = Predavanje::where('id', '=', $id)->with(['kolegij'])->first();
+        return view('dolasci.pogled_prof', ['dolasci' => $dolasci, 'predavanje' => $predavanje]);
 
-        return view('predavanja.pogled', ['predavanja' => $predavanja]);
     }
-
-
 }
 
 

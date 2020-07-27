@@ -7,6 +7,7 @@
         <div class="col-md-10 offset-1">
             <div class="row">
                 <div class="col-md-8">
+                    <p> {{$kolegij->naziv }} -> Predavanja</p>
                     <h1>Predavanja</h1>
                 </div>
 

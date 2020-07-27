@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Dolazak;
+use App\Predavanje;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,13 +40,5 @@ class UserController extends Controller
 
     }
 
-
-    public function users($id)
-    {
-        $users =Dolazak::where('predavanje_id', '=', $id)->get();
-
-        return view('dolasci.pogled_prof', ['users' => $users]);
-
-    }
 
 }
