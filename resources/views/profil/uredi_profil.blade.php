@@ -4,7 +4,7 @@
 @extends('profil.okvir')
 
 @section('sadrzaj')
-    <div class="col-md-8">
+    <div class="col-md-8 offset-2">
 
         <div class="card">
             <div class="card-body">
@@ -38,10 +38,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email *</label>
+                            <label for="name">Email *</label>
                             <input name="email" type="text" class="form-control" placeholder="Unesi email.. *"
                                    value="{{ $user->email }}">
                         </div>
+
+
 
 
                         <button type="submit" class="btn btn-primary">Spremi</button>

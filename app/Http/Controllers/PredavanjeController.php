@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\UserKolegij;
 use Carbon\Carbon;
 use App\Kolegij;
 use App\Predavanje;
+use App\Dolazak;
 use Illuminate\Http\Request;
 
 class PredavanjeController extends Controller
@@ -35,6 +37,7 @@ class PredavanjeController extends Controller
 
     public function create(Request $request)
     {
+        $dolasci = [];
         $predavanje= new Predavanje();
         $predavanje->naziv = $request->naziv;
         $predavanje->opis = $request->opis;
@@ -42,6 +45,20 @@ class PredavanjeController extends Controller
         $predavanje->kolegij_id=$request->id;
         $predavanje->save();
 
+        // uzeti sve usere koji su na ovom kolegiju
+        $kolegiji = UserKolegij::where('kolegij_id', '=', $request->id)->get();
+        // sve te usere ubaciti u stvoreno predavanje i postaviti im da nisu dosli(0)
+        foreach ($kolegiji as $kolegij) {
+            $new = [];
+            $new['user_id'] = $kolegij->user_id;
+            $new['predavanje_id'] =$predavanje->id;
+            $new['prisutan'] = 0;
+            $new['created_at'] = Carbon::now();
+            $new['updated_at'] = Carbon::now();
+            $dolasci[] = $new;
+        }
+        $now = Carbon::now('utc')->toDateTimeString();
+        Dolazak::insert($dolasci);
 
 
         return redirect(route("predavanja.pogled",$request->id));

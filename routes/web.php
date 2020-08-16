@@ -47,5 +47,5 @@ Route::get('/dolasci/pogled_ucenik/{id}', 'DolazakController@predavanja_ucenik')
 
 Route::get('/dolasci/pogled_prof/{id}', 'DolazakController@users')->name('dolasci.pogled_prof');
 
-
+Route::post('/dolasci/modify', 'DolazakController@modify')->name('dolasci.modify');
 

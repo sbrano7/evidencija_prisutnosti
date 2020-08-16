@@ -45,7 +45,7 @@
 
                         <div class="form-group">
                             <label for="vrijeme">Vrijeme *</label>
-                            <input name="vrijeme" type="date" class="form-control" placeholder="Unesi vrijeme.. *"
+                            <input name="vrijeme" type="datetime-local" class="form-control" placeholder="Unesi vrijeme.. *"
                                    value="{{ $predavanje->vrijeme }}">
                         </div>
 

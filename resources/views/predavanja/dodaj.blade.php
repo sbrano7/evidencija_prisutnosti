@@ -42,7 +42,7 @@
 
                                 <div class="form-group">
                                     <label for="vrijeme">Vrijeme *</label>
-                                    <input name="vrijeme" type="date" class="form-control" placeholder="Unesi vrijeme.. *" >
+                                    <input name="vrijeme" type="datetime-local" class="form-control" placeholder="Unesi vrijeme.. *" >
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Spremi</button>

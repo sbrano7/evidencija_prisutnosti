@@ -11,8 +11,8 @@ class UserKolegij extends Model
     protected $fillable = ['user_id', 'kolegij_id'];
 
 
-
 }
+
 
 
 
