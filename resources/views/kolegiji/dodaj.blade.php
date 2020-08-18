@@ -39,8 +39,7 @@
                             <label for="naziv">Opis *</label>
                             <textarea class="form-control" name="opis" rows="5" placeholder="Unesi opis.."></textarea>
                         </div>
-
-                        <button type="submit" class="btn btn-primary">Spremi</button>
+                        <button type="submit" class="btn btn-primary" >Spremi</button>
                     </form>
                 </div>
             </div>

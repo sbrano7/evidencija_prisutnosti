@@ -40,8 +40,6 @@
                         @if (Auth::user()->type=='profesor')
                             <td>
                                 <a href="{{ route('predavanja.uredi', $predavanje->id) }}">Uredi</a>
-                                |
-                                <a href="{{ route('predavanja.izbrisi', $predavanje->id) }}">Izbriši</a>
                             </td>
                         @endif
                     </tr>

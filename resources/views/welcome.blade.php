@@ -69,7 +69,7 @@
         </style>
     </head>
     <body>
-    <div class="view" style="background-image: url('https://manlionapoli.com/images/fpmoz.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
+    <div class="view" style="background: -webkit-linear-gradient(left, #00c6ff, #3931af); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">

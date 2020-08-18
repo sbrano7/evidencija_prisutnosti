@@ -26,6 +26,7 @@
             @foreach($dolasci as $dolazak)
                 <form action="{{ route('dolasci.modify') }}" method="POST">
                     @csrf
+                    @if ($dolazak->user->type=='ucenik')
                     <tr>
                         <td>{{$dolazak->user->name}}</td>
                         <td>
@@ -44,6 +45,7 @@
                             <a href="{{ route('dolasci.modify') }}"><button  class="btn btn-primary">Spremi</button></a>
                         </td>
                     </tr>
+                    @endif
                 </form>
             @endforeach
 

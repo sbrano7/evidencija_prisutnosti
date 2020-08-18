@@ -38,14 +38,23 @@ Route::post('/kolegiji/uredi/{id}', 'KolegijController@edit')->name('kolegiji.ur
 Route::get('/predavanja/pogled/{id}', 'PredavanjeController@index')->name('predavanja.pogled');
 Route::get('/predavanja/dodaj/{id}', 'PredavanjeController@create_form')->name('predavanja.dodaj');
 Route::get('/predavanja/uredi/{id}', 'PredavanjeController@edit_form')->name('predavanja.uredi');
-Route::get('/predavanja/izbrisi/{id}', 'PredavanjeController@delete')->name('predavanja.izbrisi');
 
 Route::post('/predavanja/spremi', 'PredavanjeController@create')->name('predavanja.spremi');
 Route::post('/predavanja/uredi/{id}', 'PredavanjeController@edit')->name('predavanja.uredi');
 
+/* dolasci */
 Route::get('/dolasci/pogled_ucenik/{id}', 'DolazakController@predavanja_ucenik')->name('dolasci.pogled_ucenik');
-
 Route::get('/dolasci/pogled_prof/{id}', 'DolazakController@users')->name('dolasci.pogled_prof');
 
 Route::post('/dolasci/modify', 'DolazakController@modify')->name('dolasci.modify');
+Route::post('/dolasci/create', 'DolazakController@create')->name('dolasci.create');
+
+/* dodavanje studenata */
+Route::get('/studenti/prikazi/{id}', 'UserController@index')->name('studenti.prikazi');
+Route::post('/studenti/dodaj/{id}', 'UserController@search')->name('studenti.dodaj');
+Route::post('/userkolegij/create', 'UserKolegijController@create')->name('userkolegij.create');
+
+
+
+
 

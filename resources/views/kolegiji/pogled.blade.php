@@ -61,6 +61,8 @@
                                 <a href="{{ route('kolegiji.uredi', $kolegij->id) }}">Uredi</a>
                                 |
                                 <a href="{{ route('kolegiji.izbrisi', $kolegij->id) }}">Izbriši</a>
+
+                                <a href="{{ route('studenti.prikazi', $kolegij->id) }}" class="btn btn-primary" style="float:right;">Dodaj studente</a>
                             </td>
                         @endif
 

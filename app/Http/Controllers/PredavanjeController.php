@@ -78,13 +78,5 @@ class PredavanjeController extends Controller
 
     }
 
-    public function delete(Request $request, $id)
-    {
-        $predavanje = Predavanje::find($id);
-        $predavanje->delete();
-
-        return redirect(route("predavanja.pogled",$predavanje->kolegij_id));
-
-    }
 
 }
