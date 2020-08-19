@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <h4 class="card-title">{{ Auth::user()->name }}</h4>
                     <p class="card-text">{{ Auth::user()->email }}</p><br>
-                    <a href="{{ route('profil.uredi_profil', Auth::user()->id ) }}" class="btn btn-primary" style="float: right;" >Uredi profil</a>
+                    <a href="{{ route('profil.uredi_profil', Auth::user()->id ) }}" class="btn btn-primary" style="float: right;" >Uredi e-mail</a>
                 </div>
             </div>
         </div>

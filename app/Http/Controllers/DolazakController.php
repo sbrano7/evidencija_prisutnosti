@@ -12,8 +12,8 @@ class DolazakController extends Controller
     public function predavanja_ucenik($id)
     {
         $predavanja = Predavanje::where('kolegij_id', '=', $id)->get();
-
-        return view('dolasci.pogled_ucenik', ['predavanja' => $predavanja]);
+        $dolasci = Dolazak::where('user_id', '=', Auth::user()->id )->get();
+        return view('dolasci.pogled_ucenik', ['predavanja' => $predavanja,'dolasci' => $dolasci]);
     }
 
 
