@@ -41,7 +41,7 @@ class PredavanjeController extends Controller
         $predavanje= new Predavanje();
         $predavanje->naziv = $request->naziv;
         $predavanje->opis = $request->opis;
-        $predavanje->vrijeme = Carbon::now();
+        $predavanje->vrijeme = $request->vrijeme;
         $predavanje->kolegij_id=$request->id;
         $predavanje->save();
 

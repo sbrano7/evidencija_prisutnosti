@@ -56,7 +56,6 @@ public function search(Request $request){
     public function edit(Request $request,$id)
     {
         $user = User::find($id);
-        $user->name = $request->name;
         $user->email = $request->email;
 
         $user->save();

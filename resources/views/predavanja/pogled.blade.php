@@ -7,7 +7,7 @@
         <div class="col-md-10 offset-1">
             <div class="row">
                 <div class="col-md-8">
-                    <p> <a href="{{ route('kolegiji.pogled') }}" >Početna</a> -> {{$kolegij->naziv }}</p>
+                    <p> <a href="{{ route('kolegiji.pogled') }}" >Početna</a> -> {{$kolegij->naziv}}</p>
                     <h2>Predavanja:</h2>
                 </div>
 

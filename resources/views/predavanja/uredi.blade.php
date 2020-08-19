@@ -12,7 +12,7 @@
                     <h3 style="margin-top: 5px;">Uredi predavanje  </h3>
                 </div>
                 <div  style="text-align: right;">
-                    <a href="{{ route('predavanja.pogled',request()->id) }}" class="btn btn-danger">Vrati se</a>
+                    <a href="{{ route('predavanja.pogled',$predavanje->kolegij_id) }}" class="btn btn-danger">Vrati se</a>
                 </div>
 
             </div>

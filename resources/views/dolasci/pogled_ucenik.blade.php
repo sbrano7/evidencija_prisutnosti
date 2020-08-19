@@ -3,6 +3,9 @@
 
 
 @section('sadrzaj')
+<div  style="text-align: right;">
+                                <a href="{{ route('kolegiji.pogled')}}" class="btn btn-danger">Vrati se</a>
+                     </div>
 <h2>Prisutnost:</h2>
 <table class="table table-striped">
 				<thead>
