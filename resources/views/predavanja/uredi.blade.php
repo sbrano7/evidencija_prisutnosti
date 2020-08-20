@@ -2,7 +2,6 @@
 
 @section('sadrzaj')
 
-
     <div class="col-md-8 offset-2">
 
         <div class="card">
@@ -19,8 +18,6 @@
         </div>
 
         <br/>
-
-
 
         <div class="card">
             <div class="card-body">
@@ -55,6 +52,5 @@
             </div>
         </div>
     </div>
-
 
 @endsection

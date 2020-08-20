@@ -13,6 +13,7 @@ class DolazakController extends Controller
     {
         $predavanja = Predavanje::where('kolegij_id', '=', $id)->get();
         $dolasci = Dolazak::where('user_id', '=', Auth::user()->id )->get();
+        
         return view('dolasci.pogled_ucenik', ['predavanja' => $predavanja,'dolasci' => $dolasci]);
     }
 
@@ -21,6 +22,7 @@ class DolazakController extends Controller
     {
         $dolasci =Dolazak::where('predavanje_id', '=', $id)->with(['user'])->get();
         $predavanje = Predavanje::where('id', '=', $id)->with(['kolegij'])->first();
+
         return view('dolasci.pogled_prof', ['dolasci' => $dolasci, 'predavanje' => $predavanje]);
 
     }

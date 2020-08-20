@@ -18,7 +18,7 @@
                 @endif
             </div>
 
-    <br>
+            <br>
 
             <table class="table table-bordered">
                 <tr>
@@ -46,9 +46,6 @@
                 @endforeach
             </table>
 
-
         </div>
-
-
-
+        
 @endsection

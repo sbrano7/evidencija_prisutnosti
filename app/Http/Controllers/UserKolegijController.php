@@ -20,9 +20,6 @@ class UserKolegijController extends Controller
         $userkolegij->save();
 
         return redirect(route("kolegiji.pogled"));
-
-
     }
-
 
 }

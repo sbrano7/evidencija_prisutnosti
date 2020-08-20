@@ -21,7 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::get('/profil/uredi_profil/{id}', 'UserController@edit_form')->name('profil.uredi_profil');
 Route::post('/profil/uredi_profil/{id}', 'UserController@edit')->name('profil.uredi_profil');
 

@@ -4,41 +4,38 @@
 
 <div class="col-md-8 offset-2"  >
 
-<div class="card">
-            <div class="card-body">
+	<div class="card">
+        <div class="card-body">
 
-                <div class="col-md-8">
+            <div class="col-md-8">
                     <h3 style="margin-top: 5px;">Dodaj studente</h3>
-                </div>
+            </div>
                 <div  style="text-align: right;">
                     <a href="{{ route('kolegiji.pogled') }}" class="btn btn-danger">Vrati se</a>
                 </div>
-
-            </div>
         </div>
+    </div>
 
+	<br/>
 
+	<div class="col-md-8 offset-2">
 
-<br/>
-
-
-<div class="col-md-8 offset-2">
-
-	<form action="{{ route('studenti.dodaj',request()->id ) }}" method="POST" role="search">
-			{{ csrf_field() }}
-			<div class="input-group">
-				<input type="text" class="form-control" name="q" placeholder="Pretraži studente"> <span class="input-group-btn">
-					<button type="submit" class="btn btn-default">
-                      <span class="fas fa-search"></span>
-					</button>
-				</span>
-			</div>
+		<form action="{{ route('studenti.dodaj',request()->id ) }}" method="POST" role="search">
+				{{ csrf_field() }}
+				<div class="input-group">
+					<input type="text" class="form-control" name="q" placeholder="Pretraži studente"> 
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default">
+                      		<span class="fas fa-search"></span>
+							</button>
+						</span>
+				</div>
 		</form>
- </div>
+ 	</div>
 
- <br/>
+ 	<br/>
 
- <div class="container">
+ 	<div class="container">
 			@if(isset($details))
 			<p> Rezultat za pretraživanje <b> {{ $query }} </b> je :</p>
 			<h2>Studenti:</h2>
@@ -68,6 +65,7 @@
     
                 		</form> 
 						</td>
+
 					</tr>
 					@endif
 					@endforeach
@@ -77,7 +75,5 @@
 			<p>{{ $message }}</p>
 			@endif
 		</div>
-
-
-
+		
 @endsection

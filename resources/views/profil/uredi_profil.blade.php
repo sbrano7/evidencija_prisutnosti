@@ -1,6 +1,4 @@
 
-
-
 @extends('profil.okvir')
 
 @section('sadrzaj')
@@ -20,8 +18,6 @@
         </div>
 
         <br/>
-
-
 
         <div class="card">
             <div class="card-body">
@@ -47,9 +43,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 @endsection
 

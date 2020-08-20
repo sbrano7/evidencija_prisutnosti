@@ -27,6 +27,7 @@
                 <form action="{{ route('dolasci.modify') }}" method="POST">
                     @csrf
                     @if ($dolazak->user->type=='ucenik')
+                    
                     <tr>
                         <td>{{$dolazak->user->name}}</td>
                         <td>
@@ -49,15 +50,8 @@
                 </form>
             @endforeach
 
-
-
-
-
         </table>
 
-
     </div>
-
-
 
 @endsection

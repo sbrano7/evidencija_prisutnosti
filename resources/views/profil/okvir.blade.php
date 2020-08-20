@@ -15,7 +15,6 @@
 
     <style>
 
-
         .pozadina{
             padding: 5% 3%;
             margin-top: 3%;
@@ -27,9 +26,6 @@
         body{background: -webkit-linear-gradient(left, #3931af, #00c6ff);}
 
     </style>
-
-
-
 
 </head>
 

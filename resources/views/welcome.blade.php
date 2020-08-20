@@ -69,9 +69,9 @@
         </style>
     </head>
     <body>
-    <div class="view" style="background: -webkit-linear-gradient(left, #00c6ff, #3931af); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+        <div class="view" style="background: -webkit-linear-gradient(left, #00c6ff, #3931af); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
+            <div class="flex-center position-ref full-height">
+                @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/kolegiji/pogled') }}">Početna</a>
@@ -83,7 +83,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+                @endif
 
             <div class="content">
                 <div class="title m-b-md text-white"  >

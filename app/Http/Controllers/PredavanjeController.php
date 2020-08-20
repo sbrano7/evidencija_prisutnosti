@@ -13,10 +13,9 @@ class PredavanjeController extends Controller
 {
     public function index($id)
     {
-
-
         $predavanja =Predavanje::where('kolegij_id', '=', $id)->get();
         $kolegij = Kolegij::where('id', '=', $id)->first();
+
         return view('predavanja.pogled', ['predavanja' => $predavanja,'kolegij' => $kolegij]);
     }
 
@@ -24,7 +23,6 @@ class PredavanjeController extends Controller
 
     public function create_form()
     {
-
         return view('predavanja.dodaj');
     }
 
@@ -44,10 +42,9 @@ class PredavanjeController extends Controller
         $predavanje->vrijeme = $request->vrijeme;
         $predavanje->kolegij_id=$request->id;
         $predavanje->save();
-
-        // uzeti sve usere koji su na ovom kolegiju
+        
         $kolegiji = UserKolegij::where('kolegij_id', '=', $request->id)->get();
-        // sve te usere ubaciti u stvoreno predavanje i postaviti im da nisu dosli(0)
+        
         foreach ($kolegiji as $kolegij) {
             $new = [];
             $new['user_id'] = $kolegij->user_id;
@@ -60,10 +57,7 @@ class PredavanjeController extends Controller
         $now = Carbon::now('utc')->toDateTimeString();
         Dolazak::insert($dolasci);
 
-
         return redirect(route("predavanja.pogled",$request->id));
-
-
     }
 
     public function edit(Request $request, $id)
@@ -75,8 +69,6 @@ class PredavanjeController extends Controller
         $predavanje->save();
 
         return redirect(route("predavanja.pogled",$predavanje->kolegij_id));
-
     }
-
 
 }

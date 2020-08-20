@@ -17,8 +17,6 @@ class KolegijController extends Controller
         return view('kolegiji.pogled', ['kolegiji' => $kolegiji,]);
     }
 
-
-
     public function create_form()
     {
         return view('kolegiji.dodaj');
@@ -45,8 +43,6 @@ class KolegijController extends Controller
         $user_kolegij ->save();
 
         return redirect(route("kolegiji.pogled"));
-
-
     }
 
     public function edit(Request $request, $id)
@@ -56,11 +52,7 @@ class KolegijController extends Controller
         $kolegij->opis = $request->opis;
         $kolegij->save();
 
-
-
-
         return redirect(route("kolegiji.pogled"));
-
     }
 
     public function delete(Request $request, $id)
@@ -69,7 +61,6 @@ class KolegijController extends Controller
         $kolegij->delete();
 
         return redirect(route("kolegiji.pogled"));
-
     }
 
 }

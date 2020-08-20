@@ -5,7 +5,8 @@
 @section('sadrzaj')
 <div  style="text-align: right;">
                                 <a href="{{ route('kolegiji.pogled')}}" class="btn btn-danger">Vrati se</a>
-                     </div>
+    </div>
+
 <h2>Prisutnost:</h2>
 <table class="table table-striped">
 				<thead>
@@ -29,9 +30,9 @@
                         </td>
 
 					</tr>
-    @endif
+    				@endif
 					@endforeach
 				</tbody>
-			</table>
+	</table>
 
 @endsection
