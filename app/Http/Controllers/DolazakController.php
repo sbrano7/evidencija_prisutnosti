@@ -9,6 +9,13 @@ use Illuminate\Http\Request;
 
 class DolazakController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
+
     public function predavanja_ucenik($id)
     {
         $predavanja = Predavanje::where('kolegij_id', '=', $id)->get();

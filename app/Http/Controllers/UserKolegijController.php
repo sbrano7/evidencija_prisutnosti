@@ -11,7 +11,12 @@ use Illuminate\Support\Facades\Auth;
 class UserKolegijController extends Controller
 
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
+    
     public function create(Request $request)
     {
         $userkolegij= new UserKolegij();
@@ -19,7 +24,7 @@ class UserKolegijController extends Controller
         $userkolegij->kolegij_id =$request->kolegij_id;
         $userkolegij->save();
 
-        return redirect(route("kolegiji.pogled"));
+        return redirect(route("studenti.prikazi", ['id'=>$userkolegij->kolegij_id]));
     }
 
 }

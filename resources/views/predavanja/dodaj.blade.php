@@ -24,7 +24,7 @@
 
                         <div class="col-md-8 offset-2">
 
-                            <form action="{{ route('predavanja.spremi') }}" method="POST">
+                            <form id='spremi' action="{{ route('predavanja.spremi') }}" method="POST">
                             @csrf
                                 <input name="id" type="hidden" class="form-control" value="{{request()->id}}">
                                 <div class="form-group">
@@ -42,8 +42,18 @@
                                     <input name="vrijeme" type="datetime-local" class="form-control" placeholder="Unesi vrijeme.. *" >
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Spremi</button>
+                                <button type="button" onclick="myF()" class="btn btn-primary">Spremi</button>
                             </form>
+                            <p style="color: red;"> @error('naziv') {{$message}}@enderror</p>
+                            <p style="color: red;"> @error('vrijeme') {{$message}}@enderror</p>
+                            <script>
+								function myF(){
+									var r = confirm("Da li ste sigurni da želite dodati novo predavanje?");
+  									if (r == true) {
+										document.getElementById('spremi').submit();
+									    }
+								    }
+						</script>
                         </div>
                     </div>
                 </div>

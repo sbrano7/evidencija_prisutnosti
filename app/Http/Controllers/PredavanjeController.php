@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 
 class PredavanjeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
     public function index($id)
     {
         $predavanja =Predavanje::where('kolegij_id', '=', $id)->get();
@@ -18,7 +24,6 @@ class PredavanjeController extends Controller
 
         return view('predavanja.pogled', ['predavanja' => $predavanja,'kolegij' => $kolegij]);
     }
-
 
 
     public function create_form()
@@ -35,6 +40,13 @@ class PredavanjeController extends Controller
 
     public function create(Request $request)
     {
+
+        $data=request()->validate([
+            'naziv'=> ['required' ],
+            'opis'=> ['required' ],
+            'vrijeme'=> ['required' ],
+        ]);
+        
         $dolasci = [];
         $predavanje= new Predavanje();
         $predavanje->naziv = $request->naziv;

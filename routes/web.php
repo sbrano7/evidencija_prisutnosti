@@ -21,6 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+/* profil */
 Route::get('/profil/uredi_profil/{id}', 'UserController@edit_form')->name('profil.uredi_profil');
 Route::post('/profil/uredi_profil/{id}', 'UserController@edit')->name('profil.uredi_profil');
 
@@ -50,6 +51,7 @@ Route::post('/dolasci/create', 'DolazakController@create')->name('dolasci.create
 
 /* dodavanje studenata */
 Route::get('/studenti/prikazi/{id}', 'UserController@index')->name('studenti.prikazi');
+
 Route::post('/studenti/dodaj/{id}', 'UserController@search')->name('studenti.dodaj');
 Route::post('/userkolegij/create', 'UserKolegijController@create')->name('userkolegij.create');
 

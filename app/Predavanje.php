@@ -14,8 +14,4 @@ class Predavanje extends Model
     {
         return $this->belongsTo('App\Kolegij',  'kolegij_id');
     }
-
-
-
-
 }

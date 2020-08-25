@@ -9,7 +9,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class KolegijController extends Controller
+
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $kolegiji = Kolegij::get();
@@ -31,6 +37,13 @@ class KolegijController extends Controller
 
     public function create(Request $request)
     {
+
+
+        $data=request()->validate([
+            'naziv'=> ['required' ],
+            'opis'=> ['required' ]
+        ]);
+
         $kolegij= new Kolegij();
         $kolegij->naziv = $request->naziv;
         $kolegij->opis = $request->opis;
