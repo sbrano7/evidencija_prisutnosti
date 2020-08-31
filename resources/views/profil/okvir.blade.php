@@ -23,7 +23,7 @@
             background-color: white ;
         }
 
-        body{background: -webkit-linear-gradient(left, #3931af, #00c6ff);}
+        body{ background: -webkit-linear-gradient(left, #3931af, #00c6ff); }
 
     </style>
 

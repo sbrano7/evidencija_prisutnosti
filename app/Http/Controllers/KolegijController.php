@@ -37,8 +37,7 @@ class KolegijController extends Controller
 
     public function create(Request $request)
     {
-
-
+        
         $data=request()->validate([
             'naziv'=> ['required' ],
             'opis'=> ['required' ]

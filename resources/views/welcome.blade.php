@@ -49,18 +49,20 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 100px;
             }
 
             .links > a {
-                color: #f8fafc;
+                color: black;
                 font-family: bold;
-                padding: 0 30px;
-                font-size: 17px;
+                padding: 20px;
+                font-size: 20px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                box-sizing: border-box;
+                background-color: lightblue;
             }
 
             .m-b-md {
@@ -69,7 +71,7 @@
         </style>
     </head>
     <body>
-        <div class="view" style="background: -webkit-linear-gradient(left, #00c6ff, #3931af); background-repeat: no-repeat; background-size: cover; background-position: center center; ">
+        <div class="view" style="background-image: url('../../evidencija_prisutnosti/slikapozadine.jpg'); ">
             <div class="flex-center position-ref full-height">
                 @if (Route::has('login'))
                 <div class="top-right links">
@@ -86,7 +88,7 @@
                 @endif
 
             <div class="content">
-                <div class="title m-b-md text-white"  >
+                <div class="title m-b-md ">
                     Evidencija prisutnosti</br> na predavanju
                 </div>
 

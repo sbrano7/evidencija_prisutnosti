@@ -22,8 +22,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 /* profil */
-Route::get('/profil/uredi_profil/{id}', 'UserController@edit_form')->name('profil.uredi_profil');
-Route::post('/profil/uredi_profil/{id}', 'UserController@edit')->name('profil.uredi_profil');
+Route::get('/profil/promjeni_sifru', 'UserController@edit_form')->name('profil.promjeni_sifru');
+Route::post('/profil/promjeni_sifru', 'UserController@edit')->name('profil.promjeni_sifru');
+
 
 /* Kolegij */
 Route::get('/kolegiji/pogled', 'KolegijController@index')->name('kolegiji.pogled');
